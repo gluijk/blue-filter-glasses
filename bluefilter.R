@@ -32,14 +32,14 @@ img2L[,,1:3]=img2
 
 img1L[,,4]=(0.299*img1[,,1]^(1/Gamma) +
             0.587*img1[,,2]^(1/Gamma) +
-            0.114*img1[,,3]^(1/Gamma))^Gamma
+            0.114*img1[,,3]^(1/Gamma)) ^ Gamma
 img2L[,,4]=(0.299*img2[,,1]^(1/Gamma) +
             0.587*img2[,,2]^(1/Gamma) +
-            0.114*img2[,,3]^(1/Gamma))^Gamma
+            0.114*img2[,,3]^(1/Gamma)) ^ Gamma
 rm(img1, img2)
 
 
-# Calculate photons loss
+# Calculate photon loss
 colores=c("R", "G", "B", "L")
 for (i in 1:4) {
     f=median(img2L[,,i]) / median(img1L[,,i])
